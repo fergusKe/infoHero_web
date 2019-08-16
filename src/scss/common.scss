@@ -1,0 +1,321 @@
+@import "compass";
+
+$nav-title1: #ef5350;
+$nav-title2: #00bcd4;
+$nav-title3: #8bc34a;
+$nav-title4: #ffb300;
+
+body {
+  background-color: #5d5d5d;
+}
+.title {
+  font-size: 20px !important;
+  color: $nav-title2;
+}
+.nav {
+  vertical-align: top;
+}
+.header {
+  height: 50px;
+  background-color: #424242;
+  min-width: 1024px;
+  z-index: 10;
+  .h-title {
+    position: absolute;
+    line-height: 50px;
+    top: 0;
+    left: 10px;
+    font-size: 20px;
+    a {
+      color: #FFF;
+    }
+  }
+}
+.nav {
+  // display: inline-block;
+  // font-size: 0;
+  .nav-title1 {
+    a {
+      &:hover {
+        // background-color: $nav-title1;
+      }
+    }
+    ul {
+      background-color: $nav-title1;
+    }
+    &.active {
+      a {
+        background-color: $nav-title1;
+      }
+    }
+  }
+  .nav-title2 {
+    a {
+      &:hover {
+        // background-color: $nav-title2;
+      }
+    }
+    ul {
+      background-color: $nav-title2;
+    }
+    &.active {
+      a {
+        background-color: $nav-title2;
+      }
+    }
+  }
+  .nav-title3 {
+    a {
+      &:hover {
+        // background-color: $nav-title3;
+      }
+    }
+    ul {
+      background-color: $nav-title3;
+    }
+    &.active {
+      a {
+        background-color: $nav-title3;
+      }
+    }
+  }
+  .nav-title4 {
+    a {
+      &:hover {
+        // background-color: $nav-title4;
+      }
+    }
+    ul {
+      background-color: $nav-title4;
+    }
+    &.active {
+      a {
+        background-color: $nav-title4;
+      }
+    }
+  }
+  .navCont {
+    text-align: right;
+    font-size: 0;
+    > li {
+      // position: relative;
+      display: inline-block;
+      // vertical-align: top;
+      font-size: 18px;
+      height: 50px;
+      // line-height: 50px;
+      // text-align: left;
+      > a {
+        line-height: 50px;
+      }
+      &:hover {
+        > a {
+          // color: #ec429a;
+        }
+        ul {
+          display: block;
+        }
+      }
+      ul {
+        // display: none;
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 100%;
+        // z-index: -1;
+        li {
+          line-height: 16px;
+          &:hover {
+            a {
+              // color: #ec429a;
+            }
+          }
+        }
+      }
+    }
+    a {
+      padding: 0px 30px;
+      color: #FFF;
+      width: auto;;
+    }
+  }
+}
+.main {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+  min-width: 1024px;
+}
+.content {
+  padding-top: 20px;
+  width: 1024px;
+  margin: 0 auto;
+}
+.nav-dropdown {
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+}
+.nav-list-box {
+  position: absolute;
+  width: 100%;
+  top: -1000px;
+  left: 0;
+  max-height: 180px;
+}
+.nav-list {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 0;
+  li {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    opacity: 1;
+    @include box-sizing(border-box);
+  }
+  a {
+    color: #FFF;
+  }
+}
+.nav-title1-list-box {
+  background-color: $nav-title1;
+  li {
+    &:hover {
+      background-color: darken($nav-title1, 5%);
+    }
+    &.active {
+      background-color: darken($nav-title1, 5%);
+    }
+  }
+}
+.nav-title2-list-box {
+  background-color: $nav-title2;
+  li {
+    &:hover {
+      background-color: darken($nav-title2, 5%);
+    }
+    &.active {
+      background-color: darken($nav-title2, 5%);
+    }
+  }
+}
+.nav-title3-list-box {
+  background-color: $nav-title3;
+  li {
+    &:hover {
+      background-color: darken($nav-title3, 5%);
+    }
+    &.active {
+      background-color: darken($nav-title3, 5%);
+    }
+  }
+}
+.nav-title4-list-box {
+  overflow-y: auto;
+  background-color: $nav-title4;
+  li {
+    &:hover {
+      background-color: darken($nav-title4, 5%);
+    }
+    &.active {
+      background-color: darken($nav-title4, 5%);
+    }
+  }
+}
+
+#map {
+  display: inline-block;
+  width: 500px;
+  height: 600px;
+  vertical-align: top;
+}
+
+.right {
+	position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  color: #FFF;
+}
+.chart {
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.list {
+  display: inline-block;
+  text-align: center;
+  width: 220px;
+  margin-top: 20px;
+  h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  ul {
+    width: 60px;
+    margin: 10px auto 0;
+    list-style-type: decimal;
+    line-height: 1.5;
+    font-size: 19px;
+    padding-left: 20px;
+  }
+}
+
+
+
+
+
+/*chart*/
+.axis {
+  font-size: 14px;
+  fill: #FFF;
+}
+.axis path {
+  fill: none;
+  stroke: #999;
+  stroke-width: 2;
+}
+.domain, .tick line {
+  stroke: gray;
+  stroke-width: 1;
+}
+
+
+
+/* leaflet */
+.leaflet-bottom {
+  .leaflet-control-attribution  {
+    display: none;
+  }
+}
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+// .info h4 {
+//   margin: 0 0 5px;
+//   color: #777;
+// }
+.legend {
+  text-align: left;
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}

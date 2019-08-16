@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/lib/normalize.css">
+  <link rel="stylesheet" href="./css/lib/leaflet.css" />
+  <link rel="stylesheet" href="./css/lib/fakeLoader.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/risk.css">
+  <title>家防案件預警及風險管理系統</title>
+  <script src="./js/lib/jquery-1.9.1.min.js"></script>
+  <script src="./js/lib/store.js"></script>
+  <script src="./js/lib/greensock/TweenMax.min.js"></script>
+  <script src="./js/lib/fakeLoader.js"></script>
+  <script src="./js/lib/leaflet.js"></script>
+  <script src="./js/lib/d3.v3.min.js"></script>
+  <script src="./js/lib/topojson.v1.min.js"></script>
+
+  <!-- <script src="js/common.js"></script> -->
+  <script src="js/risk.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="fakeloader"></div>
+    <div class="header">
+      <h1 class="h-title">
+        <a href="index.html">台北市家庭暴力防治 受害者熱區地圖</a>
+      </h1>
+      <div class="nav">
+        <ul class="navCont">
+          <li class="nav-title1 nav-title">
+            <a href="javascript:;">圖表樣式</a>
+          </li>
+          <li class="nav-title2 nav-title">
+            <a href="javascript:;">案件類型</a>
+          </li>
+          <li class="nav-title3 nav-title">
+            <a href="javascript:;">行政區</a>
+          </li>
+          <li class="nav-title4 nav-title">
+            <a href="javascript:;">里</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="nav-dropdown">
+        <div class="nav-title1-list-box nav-list-box chartType">
+          <ul class="nav-title1-list nav-list">
+            <li class="active" name="受害者地圖"><a href="type.html?type=all">受害者地圖</a></li>
+            <li name="親密關係風險地圖"><a href="risk.html">親密關係風險地圖</a></li>
+          </ul>
+        </div>
+        <div class="nav-title2-list-box nav-list-box caseCategory">
+          <ul class="nav-title2-list nav-list">
+            <li name="各里總案件數"><a href="type.html?type=all">全部</a></li>
+            <li name="老人保護"><a href="type.html?type=old">老人保護</a></li>
+            <li name="兒少保護"><a href="type.html?type=children">兒少保護</a></li>
+            <li name="親密關係"><a href="type.html?type=intimate">親密關係</a></li>
+            <li name="其他家虐"><a href="type.html?type=other">其他家虐</a></li>
+          </ul>
+        </div>
+        <div class="nav-title3-list-box nav-list-box area">
+          <ul class="nav-title3-list nav-list">
+            <li><a href="javascript:;">全部</a></li>
+            <li><a href="javascript:;">士林區</a></li>
+            <li><a href="javascript:;">文山區</a></li>
+            <li><a href="javascript:;">內湖區</a></li>
+            <li><a href="javascript:;">北投區</a></li>
+            <li><a href="javascript:;">中山區</a></li>
+            <li><a href="javascript:;">大安區</a></li>
+            <li><a href="javascript:;">萬華區</a></li>
+            <li><a href="javascript:;">信義區</a></li>
+            <li><a href="javascript:;">松山區</a></li>
+            <li><a href="javascript:;">大同區</a></li>
+            <li><a href="javascript:;">南港區</a></li>
+            <li><a href="javascript:;">中正區</a></li>
+          </ul>
+        </div>
+        <div class="nav-title4-list-box nav-list-box village">
+          <ul class="nav-title4-list nav-list">
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+
+        <div id="map"></div>
+        <div class="right">
+          <div class="area-top10 list">
+            <h3 class="title">台北市親密關係家暴 風險分數<br>前十大區</h3>
+            <ul>
+            </ul>
+          </div>
+          <div class="village-top10 list">
+            <h3 class="title">台北市親密關係家暴 風險分數<br>前十大里</h3>
+            <ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
